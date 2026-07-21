@@ -1,0 +1,14 @@
+# OS
+.DS_Store
+Thumbs.db
+
+# Editor
+.vscode/
+.idea/
+
+# Local Claude Code settings
+.claude/
+
+# Temporary verification screenshots
+_*.png
+_*.jpg

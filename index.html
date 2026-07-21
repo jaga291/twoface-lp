@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>TwoFace — 1サイト分の制作費で、ターゲットごとのデザインを。</title>
+<meta name="description" content="「みんなに好かれたい」Webサイトは、誰からも選ばれません。1サイト分の制作費で、ターゲットごとにデザインを出し分けるTwoFace方式。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&family=Big+Shoulders+Display:wght@300;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- HEADER -->
+<header class="site-header">
+  <div class="site-header__inner container">
+    <div class="site-brand">
+      <a class="site-logo" href="#">
+        <img class="site-logo__mark" src="assets/images/logo-full.png" alt="Two face">
+      </a>
+      <span class="site-tagline">ターゲット別に切り替えるWEBサイト</span>
+    </div>
+
+    <nav class="site-nav" aria-label="メインナビゲーション">
+      <a href="#problem">課題</a>
+      <a href="#works">実績</a>
+      <a href="#faq">FAQ</a>
+      <a href="#pricing">料金</a>
+    </nav>
+
+    <a class="header-cta" href="#">無料相談フォームへ<span class="arrow">→</span></a>
+
+    <button type="button" class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="mobileDrawer" aria-label="メニューを開く">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<div class="drawer-overlay" id="drawerOverlay"></div>
+<nav class="drawer" id="mobileDrawer" aria-label="モバイルメニュー">
+  <button type="button" class="drawer-close" id="drawerClose" aria-label="メニューを閉じる">×</button>
+  <a href="#problem">課題</a>
+  <a href="#works">実績</a>
+  <a href="#faq">FAQ</a>
+  <a href="#pricing">料金</a>
+  <a class="header-cta drawer-cta" href="#">無料相談フォームへ<span class="arrow">→</span></a>
+</nav>
+
+<!-- HERO -->
+<section class="hero" aria-label="ヒーロー">
+  <div class="hero-inner">
+    <div class="hero-text">
+      <h1>
+        「みんなに好かれたい」<br>
+        は<mark>誰にも刺さらない</mark>
+      </h1>
+      <p class="hero-lead">
+        「1サイト分の予算」でターゲットごとの<br>表示切換え機能を実現します。<br>
+        高額なツールも、<br class="br-mobile">複数サイトの制作も不要。
+      </p>
+
+      <a class="cta-button" href="#">無料相談フォームへ<span class="arrow">→</span></a>
+
+      <div class="hero-stats">
+        <div class="hero-stat">
+          <div class="hero-stat__label">制作実績</div>
+          <div class="hero-stat__value">150<span class="unit">+</span><span class="hero-stat__note">projects</span></div>
+        </div>
+        <div class="hero-stat">
+          <div class="hero-stat__label">クライアント満足度</div>
+          <div class="hero-stat__value">98<span class="unit">%</span></div>
+        </div>
+        <div class="hero-stat">
+          <div class="hero-stat__label">リピート率</div>
+          <div class="hero-stat__value">80<span class="unit">%</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero-media">
+      <img src="assets/images/hero-devices.png" alt="TwoFaceで制作したWebサイトのデバイス別デザイン例">
+    </div>
+  </div>
+
+  <span class="hero-side-label hero-side-label--right">SCROLL<span class="hero-scroll-arrow">↓</span></span>
+</section>
+
+<!-- 01 PROBLEM -->
+<section class="section problem" id="problem" aria-label="01 課題提示">
+  <div class="container">
+    <div class="section-eyebrow">
+      <span class="num">01</span>
+      <span class="rule"></span>
+      <span class="label">PROBLEM</span>
+    </div>
+    <h2>年代や性別のターゲットがちょっと違うのに、<br>
+      同じサイトでいいのかというジレンマ<br>
+      実は、こんな業種でよく起きています。<br>
+      </h2>
+
+    <div class="problem-cards">
+      <div class="problem-card">
+        <img class="photo" src="assets/images/card1_visitors.jpg" alt="採用サイト — オフィスでの面接風景">
+        <div class="body">
+          <h3>採用サイト</h3>
+          <div class="body-row">
+            <p>新卒向けの明るいコピーと写真だけで、経験者が「若手向けの会社なんだな」と離脱してしまう。</p>
+            <img class="body-illust" src="assets/images/problem-cards-body-men.png" alt="">
+          </div>
+        </div>
+      </div>
+
+      <div class="problem-card">
+        <img class="photo" src="assets/images/card2_talent.jpg" alt="不動産サイト — 物件のイメージ">
+        <div class="body">
+          <h3>不動産サイト</h3>
+          <div class="body-row">
+            <p>ファミリー向けの写真ばかりで、単身者や投資家が「自分向けじゃない」と感じて他社に流れる。</p>
+            <img class="body-illust" src="assets/images/problem-cards-body-men.png" alt="">
+          </div>
+        </div>
+      </div>
+
+      <div class="problem-card">
+        <img class="photo" src="assets/images/card3_creators.jpg" alt="クリニック — 施術のイメージ">
+        <div class="body">
+          <h3>美容クリニック</h3>
+          <div class="body-row">
+            <p>20代の予防美容の訴求だけで、40代以降の「本格的な施術を検討している人」の心をつかめない。</p>
+            <img class="body-illust" src="assets/images/problem-cards-body-women.png" alt="">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="problem-generalize">
+      <p>「ターゲットごとに見せ方を変えたい」。<br>
+        そう思っても、これまでは『複数の専用サイトを作る』か『高額なツールを入れる』しかなく、<br>
+        予算の都合で『広く浅い無難な1つのサイト』で妥協するしかありませんでした。</p>
+    </div>
+  </div>
+</section>
+
+<!-- 02 HOW IT WORKS -->
+<section class="section how-it-works" aria-label="02 解決策紹介">
+  <div class="container">
+    <div class="section-eyebrow">
+      <span class="num">02</span>
+      <span class="rule"></span>
+      <span class="label">HOW IT WORKS</span>
+    </div>
+    <h2>仕組みはとてもシンプル。<br>1つのサイトが、訪問者に合わせて変化します。</h2>
+
+    <div class="flow">
+      <picture>
+        <source media="(max-width: 600px)" srcset="assets/images/flow-diagram-sp.png">
+        <img src="assets/images/flow-diagram.png" alt="訪問者が属性を選ぶと、1つのサイトが自動でその人向けの内容に切り替わる仕組みの図解">
+      </picture>
+    </div>
+  </div>
+</section>
+
+<!-- 03 WORKS -->
+<section class="works" id="works" aria-label="03 実績・デモ">
+  <div class="container">
+    <div class="section-eyebrow">
+      <span class="num">03</span>
+      <span class="rule"></span>
+      <span class="label">WORKS</span>
+    </div>
+    <h2>実績・デモ</h2>
+    <p>Two faceで切り替えられるデモサイトです。<br>ターゲットごとに、コンテンツやメッセージが最適化される様子をご覧ください。<br>※ デモサイトは実際の切り替え機能を体験いただけます。</p>
+
+    <div class="works-grid">
+      <div class="works-card works-card--realestate is-preparing">
+        <span class="works-card__badge">
+          <svg class="works-card__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 11.5 12 4l8 7.5"/><path d="M6 10v9a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1v-9"/><path d="M10 20v-5a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v5"/></svg>
+          デモ不動産サイト
+        </span>
+        <div class="works-card__shot-wrap">
+          <img class="works-card__shot" src="assets/images/card2_talent.jpg" alt="不動産デモサイトのイメージ">
+          <div class="works-card__overlay"><span>準備中</span></div>
+        </div>
+        <p class="works-card__caption">単身者・ファミリー・投資家など<br>ターゲット別に切り替わるデモ</p>
+        <span class="works-card__cta">デモサイトを見る<span class="arrow">→</span></span>
+      </div>
+
+      <div class="works-card works-card--recruit">
+        <span class="works-card__badge">
+          <span class="works-card__badge-icon"><svg viewBox="0 0 24 24" fill="#171614"><circle cx="12" cy="8.5" r="3.6"/><path d="M4.5 20c0-4.1 3.4-6.7 7.5-6.7s7.5 2.6 7.5 6.7"/></svg></span>
+          デモ採用サイト
+        </span>
+        <div class="works-card__shot-wrap">
+          <img class="works-card__shot" src="assets/images/demo-newgrad.png" alt="採用デモサイトのイメージ（新卒・第二新卒表示）">
+        </div>
+        <div class="works-card__thumbs">
+          <img src="assets/images/demo-women.png" alt="女性・時短両立層を選んだ場合の表示">
+          <img src="assets/images/demo-select.png" alt="属性を選ぶ入口のモーダル">
+          <img src="assets/images/demo-senior.png" alt="シニア・セカンドキャリアを選んだ場合の表示">
+        </div>
+        <p class="works-card__caption">新卒・中途・女性・シニアなど<br>ターゲット別に切り替わるデモ</p>
+        <a class="works-card__cta" href="https://lightwave-recruit-demo.jaga291.workers.dev/" data-demo-link target="_blank" rel="noopener">デモサイトを見る<span class="arrow">→</span></a>
+      </div>
+
+      <div class="works-card works-card--clinic is-preparing">
+        <span class="works-card__badge">
+          <svg class="works-card__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="8" cy="8" r="3.2"/><circle cx="16" cy="8" r="3.2"/><circle cx="12" cy="15.6" r="3.2"/></svg>
+          デモ美容クリニックサイト
+        </span>
+        <div class="works-card__shot-wrap">
+          <img class="works-card__shot" src="assets/images/card3_creators.jpg" alt="美容クリニックデモサイトのイメージ">
+          <div class="works-card__overlay"><span>準備中</span></div>
+        </div>
+        <p class="works-card__caption">20代の予防美容層・40代以降の施術検討層など<br>ターゲット別に切り替わるデモ</p>
+        <span class="works-card__cta">デモサイトを見る<span class="arrow">→</span></span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 04 USE CASES -->
+<section class="section usecases" aria-label="04 向いている業種">
+  <div class="container">
+    <div class="section-eyebrow">
+      <span class="num">04</span>
+      <span class="rule"></span>
+      <span class="label">USE CASES</span>
+    </div>
+    <div class="usecases-head">
+      <h2>たとえば、こんな<br class="br-mobile">ホームページで効果大</h2>
+      <p>ターゲットによって伝えるべき情報や響く言葉は違います。<br>Two faceなら、1つのサイトで最適な訴求を実現できます。</p>
+    </div>
+
+    <div class="usecases-grid">
+      <div class="usecase-card">
+        <div class="usecase-card__head">
+          <span class="usecase-card__icon usecase-card__icon--01">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v18"/><path d="M6 6h12"/><path d="M4.5 6 2 11a2.5 2.5 0 0 0 5 0L4.5 6Z"/><path d="M19.5 6 17 11a2.5 2.5 0 0 0 5 0L19.5 6Z"/><path d="M9 21h6"/></svg>
+        </span>
+          <h3>士業（弁護士・税理士事務所）</h3>
+        </div>
+        <div class="usecase-card__targets">
+          <div><span class="tag">ターゲットA</span><p>個人の相談者（離婚・相続など）</p></div>
+          <div><span class="tag">ターゲットB</span><p>法人の顧問契約検討者</p></div>
+        </div>
+        <div class="usecase-card__question"><span class="q">?</span><p>今すぐ助けてほしい個人にも、顧問先を探す法人にも、同じ言葉で語りかけていませんか？</p></div>
+      </div>
+
+      <div class="usecase-card">
+        <div class="usecase-card__head">
+          <span class="usecase-card__icon usecase-card__icon--02">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 6.5c-1.5-1.2-3.5-1.5-6-1.5v13c2.5 0 4.5.3 6 1.5 1.5-1.2 3.5-1.5 6-1.5V5c-2.5 0-4.5.3-6 1.5Z"/><path d="M12 6.5v13"/></svg>
+        </span>
+          <h3>学習塾・予備校</h3>
+        </div>
+        <div class="usecase-card__targets">
+          <div><span class="tag">ターゲットA</span><p>保護者（実績・安心感を重視）</p></div>
+          <div><span class="tag">ターゲットB</span><p>生徒本人（雰囲気・楽しさ重視）</p></div>
+        </div>
+        <div class="usecase-card__question"><span class="q">?</span><p>申し込みを決める保護者にも、通い続ける生徒にも、同じ訴求をしていませんか？</p></div>
+      </div>
+
+      <div class="usecase-card">
+        <div class="usecase-card__head">
+          <span class="usecase-card__icon usecase-card__icon--03">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 9v6"/><path d="M2.5 10v4"/><path d="M6.5 7.5v9"/><path d="M17.5 7.5v9"/><path d="M20 9v6"/><path d="M21.5 10v4"/><path d="M6.5 12h11"/></svg>
+        </span>
+          <h3>フィットネスジム・PT</h3>
+        </div>
+        <div class="usecase-card__targets">
+          <div><span class="tag">ターゲットA</span><p>ダイエット・体型維持目的</p></div>
+          <div><span class="tag">ターゲットB</span><p>筋トレ・ボディメイク目的</p></div>
+          <div><span class="tag">ターゲットC</span><p>シニアの健康維持・リハビリ目的</p></div>
+        </div>
+        <div class="usecase-card__question"><span class="q">?</span><p>痩せたい人にも、鍛えたい人にも、健康維持したい人にも、同じメニューを見せていませんか？</p></div>
+      </div>
+
+      <div class="usecase-card">
+        <div class="usecase-card__head">
+          <span class="usecase-card__icon usecase-card__icon--04">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20.5s-7.5-4.6-9.8-9A5 5 0 0 1 12 6.2 5 5 0 0 1 21.8 11.5c-2.3 4.4-9.8 9-9.8 9Z"/></svg>
+        </span>
+          <h3>結婚相談所・婚活サービス</h3>
+        </div>
+        <div class="usecase-card__targets">
+          <div><span class="tag">ターゲットA</span><p>男性（実績・料金を重視）</p></div>
+          <div><span class="tag">ターゲットB</span><p>女性（安心感を重視）</p></div>
+          <div><span class="tag">ターゲットC</span><p>初婚層 vs 再婚層</p></div>
+        </div>
+        <div class="usecase-card__question"><span class="q">?</span><p>男性にも女性にも、初婚の人にも再婚を考える人にも、同じプロフィールだけで訴求していませんか？</p></div>
+      </div>
+
+      <div class="usecase-card">
+        <div class="usecase-card__head">
+          <span class="usecase-card__icon usecase-card__icon--05">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 11.5 12 4l8 7.5"/><path d="M6 10v9a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1v-9"/><path d="M10 20v-5a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v5"/></svg>
+        </span>
+          <h3>リフォーム・工務店</h3>
+        </div>
+        <div class="usecase-card__targets">
+          <div><span class="tag">ターゲットA</span><p>新築検討者</p></div>
+          <div><span class="tag">ターゲットB</span><p>リフォーム検討者</p></div>
+          <div><span class="tag">ターゲットC</span><p>収益物件オーナー</p></div>
+        </div>
+        <div class="usecase-card__question"><span class="q">?</span><p>新築を建てたい人にも、リフォームしたい人にも、収益物件オーナーにも、同じ施工事例を見せていませんか？</p></div>
+      </div>
+
+      <div class="usecase-card">
+        <div class="usecase-card__head">
+          <span class="usecase-card__icon usecase-card__icon--06">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12.5 21 4l-8.5 19-2-8-8.5-2.5Z"/></svg>
+        </span>
+          <h3>英会話・語学スクール</h3>
+        </div>
+        <div class="usecase-card__targets">
+          <div><span class="tag">ターゲットA</span><p>ビジネス英語目的</p></div>
+          <div><span class="tag">ターゲットB</span><p>旅行・趣味目的</p></div>
+          <div><span class="tag">ターゲットC</span><p>子ども向け（保護者が決裁）</p></div>
+        </div>
+        <div class="usecase-card__question"><span class="q">?</span><p>ビジネスで使いたい人にも、旅行で話したい人にも、子どもに習わせたい保護者にも、同じカリキュラムを見せていませんか？</p></div>
+      </div>
+
+      <div class="usecase-card">
+        <div class="usecase-card__head">
+          <span class="usecase-card__icon usecase-card__icon--07">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3.5 19 6v6c0 5-3 8-7 9-4-1-7-4-7-9V6l7-2.5Z"/><path d="M9 12l2 2 4-4"/></svg>
+        </span>
+          <h3>保険代理店</h3>
+        </div>
+        <div class="usecase-card__targets">
+          <div><span class="tag">ターゲットA</span><p>独身層（医療保険目的）</p></div>
+          <div><span class="tag">ターゲットB</span><p>子育て世帯（生命保険）</p></div>
+          <div><span class="tag">ターゲットC</span><p>シニア層（保障見直し）</p></div>
+        </div>
+        <div class="usecase-card__question"><span class="q">?</span><p>独身の人にも、子育て中の家族にも、シニア世代にも、同じ保障内容を勧めていませんか？</p></div>
+      </div>
+
+      <div class="usecase-card">
+        <div class="usecase-card__head">
+          <span class="usecase-card__icon usecase-card__icon--08">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="6" r="3"/><path d="M4 19c0-3.5 2.2-6 5-6s5 2.5 5 6"/><path d="M15 13c1.8.3 3 1.8 3 4v2"/></svg>
+        </span>
+          <h3>介護施設・老人ホーム</h3>
+        </div>
+        <div class="usecase-card__targets">
+          <div><span class="tag">ターゲットA</span><p>入居を検討する本人</p></div>
+          <div><span class="tag">ターゲットB</span><p>決定権を持つ家族</p></div>
+        </div>
+        <div class="usecase-card__question"><span class="q">?</span><p>入居するご本人にも、施設を選ぶご家族にも、同じパンフレットのような説明をしていませんか？</p></div>
+      </div>
+
+      <div class="usecase-card">
+        <div class="usecase-card__head">
+          <span class="usecase-card__icon usecase-card__icon--09">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="8" width="18" height="12" rx="2"/><path d="M8 8V6a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/><path d="M3 13h18"/><path d="M10.5 13v1.5h3V13"/></svg>
+        </span>
+          <h3>人材紹介・求人サービス</h3>
+        </div>
+        <div class="usecase-card__targets">
+          <div><span class="tag">ターゲットA</span><p>転職を考える求職者</p></div>
+          <div><span class="tag">ターゲットB</span><p>採用したい企業</p></div>
+        </div>
+        <div class="usecase-card__question"><span class="q">?</span><p>転職したい人にも、採用したい企業にも、同じトップページで語りかけていませんか？</p></div>
+      </div>
+    </div>
+
+    <div class="usecases-cta">
+      <div class="usecases-cta__text">
+        <span class="usecases-cta__icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="14" height="10" rx="1.5"/><path d="M7 18h6"/><path d="M10 14v4"/><circle cx="18" cy="12" r="4" fill="currentColor" stroke="none"/><path d="M18 10.5v3M16.5 12l1.5 1.5 1.5-1.5" stroke="#fbf0de" stroke-width="1.3"/></svg>
+        </span>
+        <div>
+          <p class="usecases-cta__main">業種やサービスの特性に合わせて、サイトの見せ方・伝え方を最適化。</p>
+          <p class="usecases-cta__sub">コンバージョン率の向上・顧客満足度の向上に貢献します。</p>
+        </div>
+      </div>
+      <a class="usecases-cta__button" href="https://lightwave-recruit-demo.jaga291.workers.dev/" data-demo-link target="_blank" rel="noopener">デモサイトで切り替えを体験する<span class="arrow">→</span></a>
+    </div>
+  </div>
+</section>
+
+<!-- 05 FAQ -->
+<section class="section faq" id="faq" aria-label="05 よくある質問">
+  <div class="container">
+    <div class="section-eyebrow">
+      <span class="num">05</span>
+      <span class="rule"></span>
+      <span class="label">FAQ</span>
+    </div>
+    <h2>よくある質問</h2>
+
+    <details class="faq-item is-open" open>
+      <summary class="q"><span>Q</span><h3>性別や年齢を自動判定するんですか?</h3><span class="chevron">▼</span></summary>
+      <div class="a"><span>A</span><p>いいえ、基本的には訪問者ご自身に選んでいただく方式です。属性を決めつけないので、法令やD&amp;Iの観点でも安心です。なお広告経由の流入については、広告ごとにリンクURLを指定しておくことで、遷移元に応じた表示を自動で出し分けることも可能です。</p></div>
+    </details>
+
+    <details class="faq-item">
+      <summary class="q"><span>Q</span><h3>表示の切り替えはどんな仕組みで実現しているんですか?</h3><span class="chevron">▼</span></summary>
+      <div class="a"><span>A</span><p>訪問者の選択（またはリンク元の情報）をもとに、同じURL・同じサーバー上で表示するコンテンツを動的に切り替えます。裏側は1つのサイトなので、更新や管理の手間は増えません。</p></div>
+    </details>
+
+    <details class="faq-item">
+      <summary class="q"><span>Q</span><h3>SEOに悪影響はありませんか?</h3><span class="chevron">▼</span></summary>
+      <div class="a"><span>A</span><p>検索エンジンには通常の1サイトとして認識されるよう設計するため、重複コンテンツによる評価低下のリスクを抑えられます。</p></div>
+    </details>
+
+    <details class="faq-item">
+      <summary class="q"><span>Q</span><h3>スマホでもきちんと切り替わりますか?</h3><span class="chevron">▼</span></summary>
+      <div class="a"><span>A</span><p>はい、PC・スマホ・タブレットいずれも同じ仕組みで対応し、レスポンシブデザインで表示されます。</p></div>
+    </details>
+
+    <details class="faq-item">
+      <summary class="q"><span>Q</span><h3>すでにあるホームページからの乗り換え（リニューアル）は可能ですか?</h3><span class="chevron">▼</span></summary>
+      <div class="a"><span>A</span><p>可能です。現行サイトの内容を活かしながら、ターゲット別のパターンを新たに設計し直せます。</p></div>
+    </details>
+
+    <details class="faq-item">
+      <summary class="q"><span>Q</span><h3>制作期間はどれくらいですか?</h3><span class="chevron">▼</span></summary>
+      <div class="a"><span>A</span><p>ページ数などの規模によりますが、5Pくらいの小規模サイトで1ヶ月が目安です。</p></div>
+    </details>
+
+    <details class="faq-item">
+      <summary class="q"><span>Q</span><h3>公開後にペルソナ（パターン）を追加・変更することはできますか?</h3><span class="chevron">▼</span></summary>
+      <div class="a"><span>A</span><p>可能です。追加ペルソナは1つあたり+10万〜15万円が目安です。</p></div>
+    </details>
+
+    <details class="faq-item">
+      <summary class="q"><span>Q</span><h3>修正の回数に上限はありますか?</h3><span class="chevron">▼</span></summary>
+      <div class="a"><span>A</span><p>プランに応じて基本の修正回数を設けています。詳細はお見積もり時にご案内します。</p></div>
+    </details>
+
+    <details class="faq-item">
+      <summary class="q"><span>Q</span><h3>公開後の運用サポートはありますか?</h3><span class="chevron">▼</span></summary>
+      <div class="a"><span>A</span><p>インフラ保守（月額3,000円〜）から、分析・改善提案まで行うグロースプラン（月額50,000円〜）まで、選択式でご用意しています。すべて月次解約可なので、必要な分だけ気軽にお使いいただけます。</p></div>
+    </details>
+  </div>
+</section>
+
+<!-- 06 PRICING -->
+<section class="pricing" id="pricing" aria-label="06 料金プラン">
+  <div class="container">
+    <div class="section-eyebrow">
+      <span class="num">06</span>
+      <span class="rule"></span>
+      <span class="label">PRICING</span>
+    </div>
+    <h2>料金プラン</h2>
+
+    <div class="pricing-grid">
+      <div class="plan">
+        <div class="tag">PLAN</div>
+        <h3>ライト</h3>
+        <p>ページ規模：4画面分の長さ×5P<br>ペルソナ数：2ペルソナ</p>
+        <div class="price">10万〜15万円</div>
+      </div>
+
+      <div class="plan featured">
+        <span class="badge">おすすめ</span>
+        <div class="tag">PLAN</div>
+        <h3>スタンダード</h3>
+        <p>ページ規模：4画面分の長さ×10P<br>ペルソナ数：3ペルソナ</p>
+        <div class="price">25万〜35万円</div>
+      </div>
+
+      <div class="plan">
+        <div class="tag">PLAN</div>
+        <h3>グロース</h3>
+        <p>ページ規模：4画面分の長さ×15P〜<br>ペルソナ数：4ペルソナ以上</p>
+        <div class="price">40万〜50万円</div>
+      </div>
+    </div>
+
+    <div class="pricing-extra">
+      <div>
+        <div class="title">含まれるもの</div>
+        <div class="desc">仕様書・ペルソナ設計、WF（Claude Design）、AI生成デザイン・写真素材（ChatGPT Image）、コーディング一式</div>
+      </div>
+      <div>
+        <div class="title">含まれないもの（別途見積り）</div>
+        <div class="desc">追加ペルソナ（1つあたり目安 +10万〜15万円）<br>実写撮影（AI生成でなく本物のカメラマンが必要な場合）<br>CMS化（クライアントが自分で更新できるようにする場合）</div>
+      </div>
+    </div>
+
+    <div class="pricing-maintenance">
+      <h3 class="pricing-maintenance__heading">保守メニュー</h3>
+      <p class="pricing-maintenance__intro">公開後の運用もお任せいただけます。日々の保守・運用から、データに基づく改善提案まで、必要な分だけ選んでご利用いただけます。</p>
+
+      <div class="pricing-maintenance__grid">
+        <div class="maintenance-card">
+          <div class="maintenance-card__name">インフラ保守</div>
+          <div class="maintenance-card__price">月額 3,000円</div>
+          <div class="maintenance-card__desc">サーバー・SSL・ドメイン管理（更新・建て替え費用込み）</div>
+        </div>
+        <div class="maintenance-card">
+          <div class="maintenance-card__name">更新おまかせ</div>
+          <div class="maintenance-card__price">月額 15,000〜20,000円</div>
+          <div class="maintenance-card__desc">月2回まで更新対応（テキスト中心）</div>
+        </div>
+        <div class="maintenance-card">
+          <div class="maintenance-card__name">グロース</div>
+          <div class="maintenance-card__price">月額 50,000〜100,000円</div>
+          <div class="maintenance-card__desc">GA/Search Console分析、ペルソナ別コピー改善提案、CV改善、簡易ABテスト</div>
+        </div>
+      </div>
+
+      <p class="pricing-maintenance__footnote">※ 契約期間の縛りはありません。すべて月次で解約いただけます。<br>※ 月額契約以外に、都度のご依頼（スポット対応）も可能です。目安：文言差し替え3,000円〜／画像込み5,000円〜（1P・5か所まで）。</p>
+    </div>
+  </div>
+</section>
+
+<!-- OUR APPROACH banner -->
+<section class="approach" style="background-image: url('assets/images/approach_banner.jpg');" aria-label="私たちのアプローチ">
+  <div class="approach-copy">
+    <div class="eyebrow">OUR APPROACH</div>
+    <h2>つくるのは、<br class="br-mobile">見た目じゃない。<br>「届く」という結果。</h2>
+  </div>
+</section>
+
+<!-- HEARING -->
+<section class="hearing" aria-label="ヒアリング導線">
+  <p>
+    まずは現状の課題を<br class="br-mobile">お聞かせください。<br>
+    貴社のビジネスモデルと<br class="br-mobile">ターゲットに合わせた<br>
+    「最適なパターンの分け方」<br class="br-mobile">から、<br>
+    無料でご提案いたします。
+  </p>
+</section>
+
+<!-- CTA -->
+<section class="cta" aria-label="お問い合わせ">
+  <h2>高額なツールも、複数サイトの制作も、もう不要。<br>「1サイト分の予算」で、選ばれるWebサイトを。</h2>
+  <a class="cta-button" href="#">無料相談フォームへ<span class="arrow">→</span></a>
+</section>
+
+<!-- FOOTER -->
+<footer class="site-footer">
+  <div class="container footer-row">
+    <div class="footer-logo"><img src="assets/images/logo-full.png" alt="Two face"></div>
+    <span class="copyright">© TwoFace</span>
+    <div class="legal-links">
+      <a href="#">プライバシーポリシー</a>
+      <a href="#">お問い合わせ</a>
+    </div>
+  </div>
+</footer>
+
+<script src="js/main.js" defer></script>
+</body>
+</html>
